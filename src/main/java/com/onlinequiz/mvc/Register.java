@@ -1,13 +1,18 @@
-package com.onlinequiz.mvc.models;
+package com.onlinequiz.mvc;
 
 public class Register {
 
-
     String firstName;
+
     String lastName;
+
     String email;
+
     String gender;
+
     int studentId;
+
+
     String password;
 
     public Register() {
@@ -54,7 +59,7 @@ public class Register {
         this.gender = gender;
     }
 
-    public int getStudentId() {
+    public long getStudentId() {
         return studentId;
     }
 
@@ -69,4 +74,4 @@ public class Register {
     public void setPassword(String password) {
         this.password = password;
     }
-
+}

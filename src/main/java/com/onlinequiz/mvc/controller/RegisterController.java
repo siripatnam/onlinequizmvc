@@ -1,6 +1,7 @@
 package com.onlinequiz.mvc.controller;
 
 import com.onlinequiz.mvc.models.Register;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,11 +15,28 @@ import javax.servlet.http.HttpServletRequest;
 public class RegisterController {
     @Autowired
     RestTemplate restTemplate;
+
     @RequestMapping(value = "/reg")
     public ModelAndView registrationPage(HttpServletRequest request){
         ModelAndView modelAndView=new ModelAndView();
         modelAndView.setViewName("registeration");
+
+
+
         ResponseEntity<Register[]> responseEntity=restTemplate.getForEntity("http://localhost:8070/register",Register[].class);
+
+        int statusCode= responseEntity.getStatusCodeValue();
+        if(statusCode>=200 &&statusCode<=299){
+            Register[] registers=responseEntity.getBody();
+            System.out.println("Account :"+registers.length);
+        }
+        else {
+
+        }
+
+
+
         return modelAndView;
     }
-}
+
+
