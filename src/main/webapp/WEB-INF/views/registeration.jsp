@@ -85,7 +85,7 @@
                 </div>
             </div>
             <div class="form-group w3ls-opt">
-                <label for="Phone" class="control-label">Gender: </label>
+                <label class="control-label">Gender: </label>
                 &nbsp&nbsp;&ensp;&ensp;&ensp;
 
                 <label class="w3layouts">
