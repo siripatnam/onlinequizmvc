@@ -7,22 +7,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script>
-        addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
-    </script>
-    <!-- fonts -->
+
     <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-    <!-- /fonts -->
-    <!-- css -->
+
     <link href="css/bootstrap.css" rel="stylesheet" type='text/css' media="all" />
     <link href="css/style.css" rel="stylesheet" type='text/css' media="all" />
-    <!-- /css -->
+
 </head>
 <body>
 
@@ -103,11 +94,6 @@
     <div class="right"></div>
     <div class="clear"></div>
 </div>
-
-<!-- js -->
-
-<script src="js/validator.min.js"></script>
-<!-- /js files -->
 
 
 
