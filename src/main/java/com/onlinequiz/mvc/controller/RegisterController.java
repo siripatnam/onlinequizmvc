@@ -17,26 +17,24 @@ public class RegisterController {
     RestTemplate restTemplate;
 
     @RequestMapping(value = "/reg")
-    public ModelAndView registrationPage(HttpServletRequest request){
-        ModelAndView modelAndView=new ModelAndView();
+    public ModelAndView registrationPage(HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("registeration");
 
 
+        ResponseEntity<Register[]> responseEntity = restTemplate.getForEntity("http://localhost:8070/register", Register[].class);
 
-        ResponseEntity<Register[]> responseEntity=restTemplate.getForEntity("http://localhost:8070/register",Register[].class);
-
-        int statusCode= responseEntity.getStatusCodeValue();
-        if(statusCode>=200 &&statusCode<=299){
-            Register[] registers=responseEntity.getBody();
-            System.out.println("Account :"+registers.length);
-        }
-        else {
+        int statusCode = responseEntity.getStatusCodeValue();
+        if (statusCode >= 200 && statusCode <= 299) {
+            Register[] registers = responseEntity.getBody();
+            System.out.println("Account :" + registers.length);
+        } else {
 
         }
-
 
 
         return modelAndView;
     }
+}
 
 
