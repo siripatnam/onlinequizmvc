@@ -85,15 +85,19 @@
                 </div>
             </div>
             <div class="form-group w3ls-opt">
-                <label class="control-label">Gender: </label>
+
+                <label  class="control-label">Gender: </label>
+
+             
+
                 &nbsp&nbsp;&ensp;&ensp;&ensp;
 
                 <label class="w3layouts">
-                    <input type="radio" name="work" id="hire" value="male" checked>Male
+                    <input type="radio" name="work" id="male" value="male" checked>Male
                 </label>
                 &nbsp &nbsp&nbsp;&ensp;&ensp;&ensp;
                 <label class="w3layouts label2">
-                    <input type="radio" name="work" id="work" value="female">Female
+                    <input type="radio" name="work" id="female" value="female">Female
                 </label>
             </div>
             <div class="form-group">
