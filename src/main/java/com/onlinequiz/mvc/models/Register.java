@@ -69,4 +69,5 @@ public class Register {
     public void setPassword(String password) {
         this.password = password;
     }
+}
 
