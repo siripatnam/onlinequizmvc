@@ -1,5 +1,7 @@
 package com.onlinequiz.mvc.controller;
 
+import com.onlinequiz.mvc.models.Login;
+import com.onlinequiz.mvc.models.Register;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,11 +18,17 @@ public class HomeController {
 
     @RequestMapping(value = "/Login", method = RequestMethod.GET)
     public ModelAndView viewLogin(){
-        return new ModelAndView("Login");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject(new Login());
+        modelAndView.setViewName("Login");
+        return modelAndView;
     }
 
     @RequestMapping(value = "/Register", method = RequestMethod.GET)
     public ModelAndView viewRegister(){
-        return new ModelAndView("registeration");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject(new Register());
+        modelAndView.setViewName("registeration");
+        return modelAndView;
     }
 }
