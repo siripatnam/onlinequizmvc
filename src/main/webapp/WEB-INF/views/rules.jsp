@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
-    <title>Login</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rules</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
@@ -13,6 +13,11 @@
         .center{
             text-align: center;
         }
+        .btn{
+            position:absolute;
+            right: 50%;
+        }
+
     </style>
 </head>
 <body>
@@ -20,7 +25,7 @@
 
     <a class="navbar-brand" href="#">QuizzBuzzz</a>
     <ul class="navbar-nav">
-        <li class="nav-item active">
+        <li class="nav-item ">
             <a class="nav-link" href="/">Home</a>
         </li>
         <li class="nav-item">
@@ -37,22 +42,19 @@
 </nav>
 
 <br><br><br>
-<div style="align-content: center">
-<div class = "container">
-    <form>
-        <div class="form-group">
-            <label for ="userName">UserName:</label>
-            <input type="text" path="username" name = "userName" id = "userName" placeholder="User Name"
-                        class="form-control"  style="width: 50%;" />
-        </div>
-        <div class = "form-group">
-            <label for ="password">Password:</label>
-            <input type="password" path="password" name = "password" id ="password"
-                   class="form-control" placeholder="Password" style="width: 50%;"/>
-        </div>
-        <input type="submit" value="Login" class="btn btn-success center" >
-    </form>
-</div>
-</div>
+
+<h1> Rules </h1>
+<ul>
+    <li>
+        <a> Total Questions: 10 </a> </li>
+    <li><a> Time alloted : 20minutes </a></li>
+    <li><a> There is no negative marking </a></li>
+    <li><a> Click on Start button to start the test </a></li>
+    <li><a> After the test starts, don't press back or refresh button or don't close the browser window </a>
+    </li>
+</ul>
+
+    <input type="submit" value="Start" class="btn btn-success center" >
+
+
 </body>
-</html>
