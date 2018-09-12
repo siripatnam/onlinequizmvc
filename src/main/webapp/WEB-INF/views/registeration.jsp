@@ -10,7 +10,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-
     <style>
 
         .marginstyle {
@@ -21,7 +20,6 @@
 
 
     </style>
-
 
 </head>
 
@@ -87,7 +85,11 @@
                 </div>
             </div>
             <div class="form-group w3ls-opt">
+
                 <label  class="control-label">Gender: </label>
+
+             
+
                 &nbsp&nbsp;&ensp;&ensp;&ensp;
 
                 <label class="w3layouts">
@@ -108,3 +110,6 @@
 </div>
 
 
+</body>
+
+</html>
