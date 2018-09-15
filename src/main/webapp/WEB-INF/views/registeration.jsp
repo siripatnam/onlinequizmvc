@@ -69,7 +69,7 @@
                 <form:label class="control-label" path="gender">Gender: </form:label>
                 &nbsp&nbsp;&ensp;&ensp;&ensp;
 
-                <label class="w3layouts">
+                <label class="w3layouts" path="gender">
                     <form:radiobutton path="gender" value="male" />Male
                 </label>
                 &nbsp &nbsp&nbsp;&ensp;&ensp;&ensp;
@@ -80,6 +80,7 @@
             <div class="form-group">
                 <input type="submit" value="Register" class="btn btn-success"/>
             </div>
+            <div class="error">${RegisterError}</div>
         </form:form>
     </div>
    </div>

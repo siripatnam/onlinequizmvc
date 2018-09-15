@@ -1,5 +1,6 @@
 package com.onlinequiz.mvc.controller;
 
+import com.onlinequiz.mvc.models.Login;
 import com.onlinequiz.mvc.models.Register;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,10 +27,13 @@ public class RegisterController {
 
         int statusCode = responseEntity.getStatusCodeValue();
         if (statusCode >= 200 && statusCode <= 299) {
-            return new ModelAndView("Login");
+            ModelAndView modelAndView = new ModelAndView();
+            modelAndView.addObject(new Login());
+            modelAndView.setViewName("Login");
+            return modelAndView;
         } else {
             ModelAndView modelAndView = new ModelAndView();
-            modelAndView.addObject("Error Registering the student");
+            modelAndView.addObject("RegisterError","Error Registering the student");
             return modelAndView;
         }
     }

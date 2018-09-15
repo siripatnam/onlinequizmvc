@@ -17,44 +17,36 @@
             position:absolute;
             right: 50%;
         }
+        .topnav-right{
+            float: right;
+        }
 
     </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
-
     <a class="navbar-brand" href="#">QuizzBuzzz</a>
     <ul class="navbar-nav">
-        <li class="nav-item ">
-            <a class="nav-link" href="/">Home</a>
+        <li class="topnav-right nav-item">
+            <a class="nav-link " href="/">LogOut</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">AboutUS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Register">New Student?Register</a>
-        </li>
-
     </ul>
 </nav>
 
 <br><br><br>
-
-<h1> Rules </h1>
-<ul>
-    <li>
-        <a> Total Questions: 10 </a> </li>
-    <li><a> Time alloted : 20minutes </a></li>
-    <li><a> There is no negative marking </a></li>
-    <li><a> Click on Start button to start the test </a></li>
-    <li><a> After the test starts, don't press back or refresh button or don't close the browser window </a>
-    </li>
-</ul>
-
-    <input type="submit" value="Start" class="btn btn-success center" >
-
-
+<div class="container">
+    <form action="/getQuestion" method="get">
+        <h1> Rules </h1>
+        <ul>
+            <li>
+                <a> Total Questions: 10 </a> </li>
+                <li><a> Time allotted : 20minutes </a></li>
+                <li><a> There is no negative marking </a></li>
+                <li><a> Click on Start button to start the test </a></li>
+                <li><a> After the test starts, don't press back or refresh button or don't close the browser window </a>
+             </li>
+        </ul>
+        <input type="submit" value="Start" class="btn btn-success center" >
+    </form>
+</div>
 </body>
