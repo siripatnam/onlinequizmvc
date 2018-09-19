@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-    <style>
+    <%--<style>
         .center{
             text-align: center;
         }
@@ -17,44 +17,75 @@
             position:absolute;
             right: 50%;
         }
+        .topnav-right{
+            float: right;
+        }
+
+    </style>--%>
+
+    <style>
+        .center{
+            text-align: center;
+        }
+        /*.btn{*/
+        /*position:absolute;*/
+        /*right: 50%;*/
+        /*}*/
+        .button {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 24px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+            position:absolute;
+            right:50%;
+        }
+
+        .button:hover {background-color: #3e8e41}
+
+        .button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+
 
     </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
-
     <a class="navbar-brand" href="#">QuizzBuzzz</a>
     <ul class="navbar-nav">
-        <li class="nav-item ">
-            <a class="nav-link" href="/">Home</a>
+        <li class="topnav-right nav-item">
+            <a class="nav-link " href="/">LogOut</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">AboutUS</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/Register">New Student?Register</a>
-        </li>
-
     </ul>
 </nav>
 
 <br><br><br>
+<div class="container">
+    <form action="/getQuestion" method="get">
+        <h1> Rules </h1>
+        <ul>
+            <li>
+                <a> Total Questions: 10 </a> </li>
+            <li><a> Time allotted : 20minutes </a></li>
+            <li><a> There is no negative marking </a></li>
+            <li><a>Answers are case sensitive,so use lower case alphabets.</a></li>
+            <li><a> Click on Start button to start the test </a></li>
+            <li><a> After the test starts, don't press back or refresh button or don't close the browser window </a>
+            </li>
+        </ul>
 
-<h1> Rules </h1>
-<ul>
-    <li>
-        <a> Total Questions: 10 </a> </li>
-    <li><a> Time alloted : 20minutes </a></li>
-    <li><a> There is no negative marking </a></li>
-    <li><a> Click on Start button to start the test </a></li>
-    <li><a> After the test starts, don't press back or refresh button or don't close the browser window </a>
-    </li>
-</ul>
-
-    <input type="submit" value="Start" class="btn btn-success center" >
-
-
+        <%--<input type="submit" value="Start" class="btn btn-success center" >--%>
+        <input type="submit" value="Start" class="button" >
+    </form>
+</div>
 </body>
