@@ -2,8 +2,8 @@ package com.onlinequiz.mvc.models;
 
 public class Question {
 
-
         private int questionId;
+
 
         private String question;
 
@@ -14,6 +14,8 @@ public class Question {
         private String optionC;
 
         private String answer;
+
+        private boolean shown;
 
         public Question() {
         }
@@ -73,5 +75,13 @@ public class Question {
         public void setAnswer(String answer) {
             this.answer = answer;
         }
+
+    public boolean isShown() {
+        return shown;
+    }
+
+    public void setShown(boolean shown) {
+        this.shown = shown;
+    }
 }
 

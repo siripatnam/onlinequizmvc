@@ -19,7 +19,7 @@ public class RegisterController {
     @RequestMapping(value = "/validateRegister")
     public ModelAndView registrationPage(@ModelAttribute("register") Register register) {
         System.out.println("Inside the /validateRegister");
-        register.setGender("male");
+        //register.setGender("male");
 
         ResponseEntity<Register> responseEntity = restTemplate
                 .postForEntity("http://localhost:8070/register",register,Register.class);

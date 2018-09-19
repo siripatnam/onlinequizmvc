@@ -74,12 +74,14 @@
 
         <tbody>
         <form:form action = "/validateQuestion" method="get" modelAttribute="question">
-            <c:forEach items="${question}" var="questions">
-                <tr>${questions.questionId} : </tr>
-                <tr>${questions.question}</tr><br>
-             <form:radiobutton path="" value="${questions.optionA}"/><tr>${questions.optionA}</tr><br>
-             <form:radiobutton path="" value="${questions.optionB}"/><tr>${questions.optionB}</tr><br>
-             <form:radiobutton path="" value="${questions.optionC}"/> <tr>${questions.optionC}</tr>
+            <c:forEach items="${questions}" var="question" varStatus="status">
+                <tr>${question.questionId} : </tr>
+                <tr>${question.question}</tr><br>
+                <form:label path="answer" id="answer"/>
+                <form:radiobutton path="answer" value="${question.optionA}"/><tr>${question.optionA}</tr><br>
+                <form:radiobutton path="answer" value="${question.optionB}"/><tr>${question.optionB}</tr><br>
+                <form:radiobutton path="answer" value="${question.optionC}"/><tr>${question.optionC}</tr><br>
+
             </c:forEach>
         </tbody>
     </table>

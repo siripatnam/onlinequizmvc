@@ -11,6 +11,6 @@
 
     End of test
 
-    <%--your score is ${score.finalScore}--%>
+    your score is ${results.getScore()}
 </body>
 </html>
